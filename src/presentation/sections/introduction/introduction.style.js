@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Typography, withStyles } from '@material-ui/core';
 export const ImgIntroduction = styled.img`
   width: 50%;
 `;
@@ -25,14 +25,6 @@ export const DescriptionIntroduction = styled.p`
   margin-top: 8px;
   margin-right: 20px;
 `;
-
-export const TitleIntroduction = styled.h2`
-  font-size: 22px;
-  color: #fff;
-  font-weight: 400;
-  margin: 0px 0px 0px 0px;
-`;
-
 export const BoxIntroduction = styled.div`
   width: 33%;
 `;
@@ -41,3 +33,17 @@ export const IntroductionSection = styled.section`
   padding-bottom: 80px;
   padding-top:80px;
 `;
+
+export const DescIntroduction = withStyles({
+  root: {
+    color: "#8492a6!important",
+    fontWeight: "100"
+  }
+})(Typography)
+
+export const TitleIntroduction = withStyles({
+  root: {
+    color: "#3c4858!important",
+    fontWeight: "100"
+  }
+})(Typography)
