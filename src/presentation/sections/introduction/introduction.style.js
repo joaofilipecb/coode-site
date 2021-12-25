@@ -30,9 +30,19 @@ export const BoxIntroduction = styled.div`
 `;
 
 export const IntroductionSection = styled.section`
-  padding-bottom: 80px;
-  padding-top:80px;
+  padding-bottom: 120px;
+  padding-top:120px;
 `;
+
+export const TitleSteps = withStyles({
+  root: {
+    textAlign: "center",
+    fontSize: "35px",
+    paddingBottom: "50px",
+    fontWeight: "600",
+    fontFamily: "Nunito, sans-serif"
+  }
+})(Typography)
 
 export const DescIntroduction = withStyles({
   root: {

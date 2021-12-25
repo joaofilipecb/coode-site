@@ -6,20 +6,26 @@ import {
   DescIntroduction,
   IntroductionSection,
   TitleIntroduction,
+  TitleSteps
 } from "./introduction.style";
 import { Box, Grid } from '@material-ui/core';
 import { Container } from '../../design-system';
 import IntroductionText from './introduction.text';
-
+import SearchIcon from '@material-ui/icons/Search';
+import Code from '@material-ui/icons/Code';
+import Check from '@material-ui/icons/Check';
 export const Introduction = () => {
 
-  const defineIcon = () => {
-
+  const defineIcon = {
+    "Discovery": <SearchIcon />,
+    "Testing": <Code />,
+    "Match": <Check />
   }
 
   return (
-    <IntroductionSection>
+    <IntroductionSection id="choose">
       <Container>
+        <TitleSteps>Nosso processo</TitleSteps>
         <Grid container spacing={4}>
           {IntroductionText.map((value) =>
             <Grid item sm={4}>
@@ -39,14 +45,13 @@ export const Introduction = () => {
               > <Box sx={{
                 height: "65px",
                 width: "65px",
-                lineHeight: "65px",
                 backgroundColor: "rgba(47, 85, 212, .1)",
                 textAlign: "center",
                 lineHeight: "80px",
                 color: "#2f55d4",
                 borderRadius: "10px",
                 marginBottom: "1.4rem"
-              }}>{defineIcon(value.title)}</Box>
+              }}>{defineIcon[value.title]}</Box>
                 <Box sx={{ marginBottom: "1rem" }}>
                   <TitleIntroduction variant="h6" component="h2">{value.title}</TitleIntroduction>
                 </Box>
