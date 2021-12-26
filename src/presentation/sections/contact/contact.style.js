@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box, Typography, withStyles } from '@material-ui/core';
+import { Typography, withStyles } from '@material-ui/core';
 
 export const ContactSection = styled.section`
   padding-bottom: 120px;
